@@ -20,13 +20,34 @@ export const InputCheckbox: InputCheckboxComponent = ({ id, checked = false, dis
         checked={checked}
         disabled={disabled}
         onChange={() => {
-          console.log({ checked })
-
           onChange(!checked)
         }}
       />
     </div>
   )
+
+  // // working code but slow
+  // return (
+  //   <div className="RampInputCheckbox--container" data-testid={inputId}>
+  //     <input
+  //       id={inputId}
+  //       type="checkbox"
+  //       className="RampInputCheckbox--input"
+  //       checked={checked}
+  //       disabled={disabled}
+  //       onChange={() => {
+  //         onChange(!checked)
+  //       }}
+  //     />
+  //     <label
+  //       htmlFor={inputId}
+  //       className={classNames("RampInputCheckbox--label", {
+  //         "RampInputCheckbox--label-checked": checked,
+  //         "RampInputCheckbox--label-disabled": !checked,
+  //       })}
+  //     />
+  //   </div>
+  // )
 }
 
 // RampInputCheckbox--label-checked
